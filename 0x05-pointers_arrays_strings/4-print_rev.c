@@ -1,12 +1,11 @@
 #include "main.h"
 /**
- * print_rev - imprime on reversa
+ * print_rev - imprint on reverse
  * @s: string
- * Return: 0
  */
 void print_rev(char *s)
 {
-	int longi = O;
+	int longi = 0;
 	int o;
 
 	while (*s != '\0')
