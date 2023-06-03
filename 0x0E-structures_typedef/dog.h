@@ -1,18 +1,24 @@
-#include <stdlib.h>
-#include "dog.h"
+#ifndef SYRTYP
+#define STRTYP
 
 /**
- * init_dog - initializes a variable of type struct dog
- * @d: pointer to struct dog to initialize
- * @name: name to intialize
- * @age: age to initialize
- * @owner: owner to initialize
+ * struct dog - structure of a dog
+ * @name: name of a dog
+ * @age: age of a dog
+ * @owner: owner of a dog
  */
-void init_dog(struct dog *d, char *name, float age, char *owner)
+struct dog
 {
-	if (d == NULL)
-		d = malloc(sizeof(struct dog));
-	d->name = name;
-	d->age = age;
-	d->owner = owner;
-}
+	char *name;
+	float age;
+	char *owner;
+};
+
+typedef struct dog dog_t;
+
+void init_dog(struct dog *d, char *name, float age, char *owner);
+void print_dog(struct dog *d);
+dog_t *new_dog(char *name, float age, char *owner);
+void free_dog(dog_t *d);
+
+#endif /*STRTYP*/
